@@ -41,23 +41,23 @@ export const HeroTexts = {
 
 export const ServiceTexts = {
     firstText: "Armada",
-    secondText: "We Offer Best Services",
+    secondText: "Pilih Armada Favorit Anda",
     cards: [
         {
-            firstText: "Calculated Weather",
-            secondText: "Built Wicket longer admire do barton vantity itself do in it."
+            firstText: "High Decker Double Glass (HDD)",
+            secondText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            firstText: "Best Flight",
-            secondText: "engrossed listening. Park gate sell they west hard for the."
+            firstText: "High Decker",
+            secondText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            firstText: "Local Events",
-            secondText: "barton vantity itself do in it.Preferred to men it engrossed listening."
+            firstText: "Normal Decker",
+            secondText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            firstText: "Customizition",
-            secondText: "We deliver outsourced aviation services for military customers."
+            firstText: "Super Top",
+            secondText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
     ]
 }
