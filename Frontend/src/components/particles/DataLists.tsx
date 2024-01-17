@@ -21,7 +21,7 @@ export const NavLinks = [
 export const NavButtons = [
     {
         name: "Login",
-        url: "/"
+        url: "/login"
     },
     // {
     //     name: "Signup",
@@ -40,7 +40,7 @@ export const HeroTexts = {
 }
 
 export const ServiceTexts = {
-    firstText: "CATEGORY",
+    firstText: "Armada",
     secondText: "We Offer Best Services",
     cards: [
         {
@@ -100,17 +100,17 @@ export const TopDestinationTexts = {
 }
 
 export const BookingStepsTexts = {
-    firstText: "Easy and Fast",
-    secondText: "Book your next trip in 3 easy steps",
+    firstText: "Cara Booking",
+    secondText: "Booking dengan 3 langkah mudah.",
     listOfSteps: [
         {
-            text: "Choose Destination lorem ipsum dolor sit amet, consectetur adipiscing elit.Urna, tortor tempus."
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            text: "Make Payment lorem ipsum dolor sit amet, consectetur adipiscing elit.Uma, totor tempus."
+            text: " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
         },
         {
-            text: "Reach Airport on Selected Date lorem ipsum dolor sit amet.consectetur adipiscing elit.Uma totor tempus."
+            text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         }
     ],
     cardOne:
@@ -128,28 +128,18 @@ export const BookingStepsTexts = {
 }
 
 export const TestimonialTexts = {
-    firstText: "TESTIMONIALS",
-    secondText: "What people say about Us.",
+    firstText: "Tentang",
+    secondText: "Visi & Misi",
     feedBacks: [
         {
-            text: "You did a fabulous job. There were no hitches. Thank you again for all your work planning this trip.",
-            person: "Mike taylor",
-            location: "Lahore, Pakistan"
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            person: "Owner Name",
+            location: "Visi"
         },
         {
-            text: "Jadoo was great with the entire process from planning to updates during the trip. We had 11 people and everything was perfectly executed. We appreciate all of her hard work. It was truly the trip of a lifetime. Thank you!",
-            person: "Gina",
-            location: "Owerri, Nigeria"
-        },
-        {
-            text: "Booking through you was very easy and made our lives so much easier. I have nothing bad to say! Thank you for giving us tips and guidance before we left on what to bring and such, that was very helpful!",
-            person: "Emma",
-            location: "Vancouver, Canada"
-        },
-        {
-            text: "Thank you for your recommendation and putting the trip together. The resort was absolutely beautiful. The infinity pools, the palm trees in the main pool, the infinity pool in out preferred area overlooking the gulf and the golf course were exceptional....",
-            person: "Loveth",
-            location: "Lagos, Nigeria"
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            person: "Owner Name",
+            location: "Misi"
         },
     ],
 }
@@ -161,34 +151,26 @@ export const NewsletterTexts = {
 }
 
 export const FooterTexts = {
-    underLogoText: "Book your trip in minutes, get full control for much longer.",
+    underLogoText: "TEMAN TRAVEL ANDA DI SELURUH INDONESIA.",
     quickLinks: {
         caption: "Quick Links",
         links: [
             {
-                name: "Destination",
+                name: "About",
                 url: "/"
             },
             {
-                name: "Hotels",
+                name: "Armada",
                 url: "/"
             },
             {
-                name: "Flights",
+                name: "Destinasi",
                 url: "/"
             },
             {
                 name: "Bookings",
                 url: "/"
             },
-            {
-                name: "Login",
-                url: "/"
-            },
-            {
-                name: "Signup",
-                url: "/"
-            }
         ]
     },
     contacts: {
@@ -203,11 +185,11 @@ export const FooterTexts = {
                 url: "/"
             },
             {
-                name: "Policies",
+                name: "Kebijakan",
                 url: "/"
             },
             {
-                name: "Terms & Conditions",
+                name: "Syarat & Ketentuan",
                 url: "/"
             }
         ]
@@ -216,19 +198,19 @@ export const FooterTexts = {
         caption: "More",
         links: [
             {
-                name: "Career",
+                name: "Lorem Ipsum",
                 url: "/"
             },
             {
-                name: "Airlines",
+                name: "Lorem Ipsum",
                 url: "/"
             },
             {
-                name: "Airline Fees",
+                name: "Lorem Ipsum",
                 url: "/"
             },
             {
-                name: "Low Fare Tips",
+                name: "Lorem Ipsum",
                 url: "/"
             }
         ]
