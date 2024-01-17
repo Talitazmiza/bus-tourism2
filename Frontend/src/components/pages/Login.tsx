@@ -58,7 +58,7 @@ const Login = () => {
 
                 <div className="md:block hidden w-1/2">
                     <img className="rounded-2xl"
-                         src="https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" />
+                         src="https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"  alt=""/>
                 </div>
             </div>
         </section>
