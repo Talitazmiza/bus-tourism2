@@ -4,10 +4,7 @@ import { ServiceTexts } from "../particles/DataLists"
 import GroupOfPlus from "../../assets/plusGroup.png"
 import { Card } from "../molecules/Card"
 import { useCallback } from "react"
-import Icon1 from "../../assets/icon1.png"
-import Icon2 from "../../assets/icon2.png"
-import Icon3 from "../../assets/icon3.png"
-import Icon4 from "../../assets/icon4.png"
+import Icon1 from "../../assets/bus-icon.png"
 import { Fade } from "react-awesome-reveal"
 
 
@@ -20,11 +17,11 @@ const Services = () => {
             case 0:
                 return Icon1;
             case 1:
-                return Icon2;
+                return Icon1;
             case 2:
-                return Icon3;
+                return Icon1;
             case 3:
-                return Icon4;
+                return Icon1;
             default:
                 return "";
         }
