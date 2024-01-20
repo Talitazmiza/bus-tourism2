@@ -38,7 +38,7 @@ const fleetTable = () => {
 
                         <div className="grid grid-cols-5 rounded-sm bg-white dark:bg-meta-4 sm:grid-cols-6">
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                                <img src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/BS%20VI%20Bus%20Single%20Axcel_Single%20Bus?wid=1400&fit=constrain" className="w-30 h-20" alt={}/>
+                                <img src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/BS%20VI%20Bus%20Single%20Axcel_Single%20Bus?wid=1400&fit=constrain" className="w-30 h-20" alt="img"/>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                                 <p className="hidden font-medium text-black sm:block">
@@ -63,7 +63,7 @@ const fleetTable = () => {
 
                         <div className="grid grid-cols-5 rounded-sm bg-white dark:bg-meta-4 sm:grid-cols-6">
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                                <img src="https://media.istockphoto.com/id/135327019/photo/white-passenger-bus.jpg?s=612x612&w=0&k=20&c=sRU5BpOsY6fyYj9pMiAxz0dLML--uoNl7rIXelRbFnc=" alt={} className="w-30 h-20"/>
+                                <img src="https://media.istockphoto.com/id/135327019/photo/white-passenger-bus.jpg?s=612x612&w=0&k=20&c=sRU5BpOsY6fyYj9pMiAxz0dLML--uoNl7rIXelRbFnc=" alt="img" className="w-30 h-20"/>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                                 <p className="hidden font-medium text-black sm:block">
@@ -88,7 +88,7 @@ const fleetTable = () => {
 
                         <div className="grid grid-cols-5 rounded-sm bg-white dark:bg-meta-4 sm:grid-cols-6">
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                                <img src="https://en.higer.com/uploadfiles/2021/01/20210114153659283.png?Njg5Ni5wbmc=" alt={} className="w-30 h-20"/>
+                                <img src="https://en.higer.com/uploadfiles/2021/01/20210114153659283.png?Njg5Ni5wbmc=" alt="img" className="w-30 h-20"/>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                                 <p className="hidden font-medium text-black sm:block">
@@ -113,7 +113,7 @@ const fleetTable = () => {
 
                         <div className="grid grid-cols-5 rounded-sm bg-white dark:bg-meta-4 sm:grid-cols-6">
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                                <img src="https://en.higer.com/uploadfiles/2021/01/20210114084446496.png?NjEyMkIucG5n" alt={} className="w-30 h-20"/>
+                                <img src="https://en.higer.com/uploadfiles/2021/01/20210114084446496.png?NjEyMkIucG5n" alt="img" className="w-30 h-20"/>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                                 <p className="hidden font-medium text-black sm:block">
@@ -138,7 +138,7 @@ const fleetTable = () => {
 
                         <div className="grid grid-cols-5 rounded-sm bg-white dark:bg-meta-4 sm:grid-cols-6">
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                                <img src="https://img.freepik.com/free-vector/cartoon-school-bus-white-background_1308-132853.jpg" alt={} className="w-30 h-20"/>
+                                <img src="https://img.freepik.com/free-vector/cartoon-school-bus-white-background_1308-132853.jpg" alt="img" className="w-30 h-20"/>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 xl:p-5">
                                 <p className="hidden font-medium text-black sm:block">
