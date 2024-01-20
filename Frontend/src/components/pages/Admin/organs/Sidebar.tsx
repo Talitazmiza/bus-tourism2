@@ -25,23 +25,23 @@ const Sidebar = () => {
                         <Image className="w-44" image={logo} alt="Logo" as="a" href="/" />
                     </a>
                     <ul className="space-y-2 font-medium">
+                        {/*<li>*/}
+                        {/*    <a href="/dashboard"*/}
+                        {/*       className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400 group">*/}
+                        {/*        <FontAwesomeIcon icon={faHouse} />*/}
+                        {/*        <span className="flex-1 ml-3 whitespace-nowrap">Dashboard</span>*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                         <li>
-                            <a href="/dashboard"
-                               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400 group">
-                                <FontAwesomeIcon icon={faHouse} />
-                                <span className="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dashboard"
+                            <a href="/dashboard-fleet"
                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
                                 <FontAwesomeIcon icon={faBus} />
                                 <span className="flex-1 ml-3 whitespace-nowrap">Armada</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/dashboard"
-                               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
+                            <a href="#"
+                               className="flex items-center p-2 text-gray-300 rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-orange-400  group">
                                 <FontAwesomeIcon icon={faClock} />
                                 <span className="flex-1 ml-3 whitespace-nowrap">Jadwal</span>
                             </a>
@@ -54,10 +54,10 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="/dashboard"
+                            <a href="/dashboard-transaction"
                                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
                                 <FontAwesomeIcon icon={faMoneyBill} />
-                                <span className="flex-1 ml-3 whitespace-nowrap">Pricings</span>
+                                <span className="flex-1 ml-3 whitespace-nowrap">Transaksi</span>
                             </a>
                         </li>
                         <li>

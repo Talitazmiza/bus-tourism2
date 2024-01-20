@@ -7,6 +7,7 @@ import { animateScroll } from "react-scroll";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login.tsx";
 import Dashboard from "./components/pages/Admin/Dashboard.tsx";
+import DashboardFleet from "./components/pages/Admin/Fleet/dashboardFleet.tsx";
 import { useEffect } from "react";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/dashboard-fleet" element={<DashboardFleet />}/>
       </Routes>
     </div>
   )
