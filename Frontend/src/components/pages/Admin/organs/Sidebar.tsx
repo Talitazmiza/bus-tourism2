@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHouse, faClock, faBus, faDoorOpen, faCity, faMoneyBill} from '@fortawesome/free-solid-svg-icons';
+import {faClock, faBus, faDoorOpen, faCity, faMoneyBill} from '@fortawesome/free-solid-svg-icons';
 import logo from "../../../../assets/logo.png"
 import {Image} from "../../../atoms/Image.tsx";
 
