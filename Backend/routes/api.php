@@ -20,12 +20,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-// Route::middleware('auth:api')->group(function () {
-
-// });
-
-Route::prefix('api')->group(function () {
-    Route::apiResource('destinations', DestinationController::class);
-});
-
-// Route::post('api/destinations', [DestinationController::class, 'store']);
+Route::apiResource('destinations', DestinationController::class);

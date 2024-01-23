@@ -22,10 +22,10 @@ class DestinationCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'dest_name' => ['required', 'string', 'min:2'],
-            'dest_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
-            'estimated_price' => ['nullable', 'integer', 'min:0'],
-            'estimated_trip' => ['nullable', 'integer', 'min:0'],
+            'dest_name' => 'required|string|min:2',
+            'dest_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'estimated_price' => 'nullable|integer|min:0',
+            'estimated_trip' => 'nullable|integer|min:0',
         ];
     }
 }

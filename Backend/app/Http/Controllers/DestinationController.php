@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\DestinationCreateRequest;
+use App\Http\Requests\DestinationUpdateRequest;
 use App\Http\Resources\DestinationResource;
 use App\Models\Destination;
 use Illuminate\Http\Request;
@@ -14,7 +15,9 @@ class DestinationController extends Controller
      */
     public function index()
     {
-        //
+        $destinations = Destination::all();
+
+        return DestinationResource::collection($destinations);
     }
 
     /**
@@ -30,24 +33,44 @@ class DestinationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
-        //
+        $destination = Destination::findOrFail($id);
+
+        return new DestinationResource($destination);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(DestinationUpdateRequest $request, int $id)
     {
-        //
+        $destination = Destination::findOrFail($id);
+
+        $requestData = $request->validated();
+
+        $destination->update($requestData);
+
+        return new DestinationResource($destination);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        //
+        $destination = Destination::findOrFail($id);
+
+        $destination->delete();
+
+        if (is_null($destination)) {
+            return response()->json(['message' => 'Destination Not Found'], 404);
+        }
+
+        if (!$destination) {
+            return response()->json(['message' => 'Failed to delete the destination'], 500);
+        }
+
+        return response()->json(['message' => 'Destination has been deleted'], 200);
     }
 }
