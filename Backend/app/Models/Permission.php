@@ -14,7 +14,7 @@ class Permission extends Model
         'perm_name',
     ];
 
-    public function role():HasManyThrough {
+    public function role(): HasManyThrough {
         return $this->hasManyThrough(Role::class, 'role_perms', 'perm_id', 'role_id');
     }
 }

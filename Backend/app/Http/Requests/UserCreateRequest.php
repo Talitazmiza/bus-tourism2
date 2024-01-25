@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DestinationCreateRequest extends FormRequest
+class UserCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,7 @@ class DestinationCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'dest_name' => 'required|string|min:2',
-            'dest_image' => 'nullable',
-            'estimated_price' => 'nullable|integer|min:0',
-            'estimated_trip' => 'nullable|integer|min:0',
+
         ];
     }
 }

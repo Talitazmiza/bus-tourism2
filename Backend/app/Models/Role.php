@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Pivot\RolePermissionPivot;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -20,6 +21,6 @@ class Role extends Model
     }
 
     public function permission(): HasManyThrough {
-        return $this->hasManyThrough(Permission::class, 'role_perms', 'role_id', 'perm_id');
+        return $this->hasManyThrough(Permission::class, RolePermissionPivot::class, 'role_id', 'id','permission_id', 'permission_id');
     }
 }

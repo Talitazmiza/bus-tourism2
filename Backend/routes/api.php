@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\FleetController;
+use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +25,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::apiResource('destinations', DestinationController::class);
+Route::post('/upload', [ImageUploadController::class, 'upload']);
+Route::apiResource('fleets', FleetController::class);
+Route::apiResource('roles', RoleController::class);
+Route::apiResource('permissions', PermissionController::class);
