@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Role;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UserCreateRequest extends FormRequest
 {
@@ -22,7 +24,10 @@ class UserCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-
+            'name' => 'required|string',
+            'email' => 'required|string',
+            'role_id' => Rule::exists(Role::class, 'id'),
+            'password' => 'required|confirmed|'
         ];
     }
 }

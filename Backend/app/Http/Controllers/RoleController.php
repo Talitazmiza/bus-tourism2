@@ -16,6 +16,10 @@ class RoleController extends Controller
     {
         $role = Role::all();
 
+        if (is_null($role)) {
+            return response()->json(['message' => 'Role Not Found'], 404);
+        }
+
         return RoleResource::collection($role);
     }
 
@@ -25,6 +29,10 @@ class RoleController extends Controller
     public function store(RoleCreateRequest $request)
     {
         $role = Role::create($request->validated());
+
+        if (!$role) {
+            return response()->json(['message' => 'Failed to create the role'], 500);
+        }
 
         return new RoleResource($role);
     }
@@ -36,6 +44,10 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
 
+        if (is_null($role)) {
+            return response()->json(['message' => 'Role Not Found'], 404);
+        }
+
         return new RoleResource($role);
     }
 
@@ -46,6 +58,10 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
 
+        if (is_null($role)) {
+            return response()->json(['message' => 'Role Not Found'], 404);
+        }
+
         $role->update($request->validated());
 
         return new RoleResource($role);
@@ -54,17 +70,15 @@ class RoleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
         $role = Role::findOrFail($id);
-
-        $role->delete();
 
         if (is_null($role)) {
             return response()->json(['message' => 'Role Not Found'], 404);
         }
 
-        if (!$role) {
+        if (!$role->delete()) {
             return response()->json(['message' => 'Failed to delete the role'], 500);
         }
 

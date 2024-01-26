@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Pivot\TransFleetPivot;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Transaction extends Model
@@ -14,8 +16,8 @@ class Transaction extends Model
     protected $fillable = [
         'details',
         'status',
-        'timestamp',
         'price',
+        'created_by',
         'dest_id',
         'start_date',
         'end_date',
@@ -29,7 +31,7 @@ class Transaction extends Model
         return $this->belongsTo(Destination::class);
     }
 
-    public function fleet(): HasManyThrough{
-        return $this->hasManyThrough(Fleet::class, 'trans_fleets', 'transaction_id', 'fleet_id');
+    public function fleet(): BelongsToMany {
+        return $this->belongsToMany(Fleet::class, TransFleetPivot::class, 'transaction_id', 'fleet_id');
     }
 }

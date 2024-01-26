@@ -17,6 +17,7 @@ class Fleet extends Model
         'capacity',
         'fleet_image',
         'in_service',
+        'created_by'
     ];
 
     public function user(): BelongsTo{

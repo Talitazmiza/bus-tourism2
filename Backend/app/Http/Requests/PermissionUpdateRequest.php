@@ -2,11 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class FleetCreateRequest extends FormRequest
+class PermissionUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,15 +22,7 @@ class FleetCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'fleet_name' => 'required',
-            'police_number' => 'required',
-            'capacity' => 'required',
-            'fleet_image' => 'nullable',
-            'in_service' => 'required',
-            'created_by' => [
-                'required',
-                Rule::exists(User::class, 'id'),
-            ]
+            'perm_name' => 'required|string'
         ];
     }
 }

@@ -24,8 +24,9 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::apiResource('destinations', DestinationController::class);
 Route::post('/upload', [ImageUploadController::class, 'upload']);
+Route::apiResource('destinations', DestinationController::class);
 Route::apiResource('fleets', FleetController::class);
 Route::apiResource('roles', RoleController::class);
 Route::apiResource('permissions', PermissionController::class);
+Route::apiResource('transactions', TransactionController::class);
