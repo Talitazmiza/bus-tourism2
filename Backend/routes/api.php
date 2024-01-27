@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\FleetController;
 use App\Http\Controllers\ImageUploadController;
@@ -24,8 +25,22 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::apiResource('destinations', DestinationController::class);
-Route::post('/upload', [ImageUploadController::class, 'upload']);
-Route::apiResource('fleets', FleetController::class);
-Route::apiResource('roles', RoleController::class);
-Route::apiResource('permissions', PermissionController::class);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::group(['middleware' => ['auth:api']], function (){
+    Route::post('/upload', [ImageUploadController::class, 'upload']);
+    Route::apiResource('destinations', DestinationController::class);
+    Route::apiResource('fleets', FleetController::class);
+    Route::apiResource('roles', RoleController::class);
+    Route::apiResource('permissions', PermissionController::class);
+    Route::apiResource('transactions', TransactionController::class);
+});
+
+Route::group([
+    'middleware' => ['auth:api']
+], function (){
+    Route::get('/profile', [AuthController::class, 'profile']);
+    Route::get('/refresh', [AuthController::class, 'refresh']);
+    Route::get('/logout', [AuthController::class, 'logout']);
+});

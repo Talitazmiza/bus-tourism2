@@ -15,9 +15,13 @@ class DestinationController extends Controller
      */
     public function index()
     {
-        $destinations = Destination::all();
+        $destination = Destination::all();
 
-        return DestinationResource::collection($destinations);
+        if (is_null($destination)) {
+            return response()->json(['message' => 'Destination Not Found'], 404);
+        }
+
+        return DestinationResource::collection($destination);
     }
 
     /**
@@ -26,6 +30,10 @@ class DestinationController extends Controller
     public function store(DestinationCreateRequest $request)
     {
         $destination = Destination::create($request->validated());
+
+        if (!$destination) {
+            return response()->json(['message' => 'Failed to create the destination'], 500);
+        }
 
         return new DestinationResource($destination);
     }
@@ -37,6 +45,10 @@ class DestinationController extends Controller
     {
         $destination = Destination::findOrFail($id);
 
+        if (is_null($destination)) {
+            return response()->json(['message' => 'Destination Not Found'], 404);
+        }
+
         return new DestinationResource($destination);
     }
 
@@ -47,9 +59,13 @@ class DestinationController extends Controller
     {
         $destination = Destination::findOrFail($id);
 
-        $requestData = $request->validated();
+        if (is_null($destination)) {
+            return response()->json(['message' => 'Destination Not Found'], 404);
+        }
 
-        $destination->update($requestData);
+        if (!$destination->update($request->validated())) {
+            return response()->json(['message' => 'Failed to update the destination'], 500);
+        }
 
         return new DestinationResource($destination);
     }
@@ -61,13 +77,11 @@ class DestinationController extends Controller
     {
         $destination = Destination::findOrFail($id);
 
-        $destination->delete();
-
         if (is_null($destination)) {
             return response()->json(['message' => 'Destination Not Found'], 404);
         }
 
-        if (!$destination) {
+        if (!$destination->delete()) {
             return response()->json(['message' => 'Failed to delete the destination'], 500);
         }
 

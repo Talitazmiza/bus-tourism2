@@ -2,7 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Destination;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class TransactionCreateRequest extends FormRequest
 {
@@ -11,7 +14,7 @@ class TransactionCreateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +24,21 @@ class TransactionCreateRequest extends FormRequest
      */
     public function rules(): array
     {
+//        dd('hello');
         return [
             'details' => ['nullable', 'string'],
-            'status' => ['required', 'in:completed,on_progress,drafted'],
-            'price' => ['requred', 'integer', 'min:0'],
+            'status' => ['required', 'string', 'in:completed,on_progress,drafted'],
+            'price' => ['required', 'integer', 'min:0'],
+            'created_by' => [
+                'required',
+                Rule::exists(User::class, 'id')
+            ],
+            'dest_id' => [
+                'required',
+                Rule::exists(Destination::class, 'id')
+            ],
+            'start_date' => ['required', 'date_format:Y-m-d'],
+            'end_date' => ['required', 'date_format:Y-m-d', 'after:start_date'],
         ];
     }
 }

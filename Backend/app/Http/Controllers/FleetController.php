@@ -14,7 +14,13 @@ class FleetController extends Controller
      */
     public function index()
     {
-        //
+        $fleet = Fleet::all();
+
+        if (is_null($fleet)) {
+            return response()->json(['message' => 'Fleet Not Found'], 404);
+        }
+
+        return FleetResource::collection($fleet);
     }
 
     /**
@@ -22,8 +28,11 @@ class FleetController extends Controller
      */
     public function store(FleetCreateRequest $request)
     {
-//        dd('hello', $request->all());
         $fleet = Fleet::create($request->validated());
+
+        if (!$fleet) {
+            return response()->json(['message' => 'Failed to create the fleet'], 500);
+        }
 
         return new FleetResource($fleet);
     }
@@ -31,24 +40,50 @@ class FleetController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
-        //
+        $fleet = Fleet::findOrFail($id);
+
+        if (is_null($fleet)) {
+            return response()->json(['message' => 'Fleet Not Found'], 404);
+        }
+
+        return new FleetResource($fleet);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(FleetCreateRequest $request, int $id)
     {
-        //
+        $fleet = Fleet::findOrFail($id);
+
+        if (is_null($fleet)) {
+            return response()->json(['message' => 'Fleet Not Found'], 404);
+        }
+
+        if (!$fleet->update($request->validated())) {
+            return response()->json(['message' => 'Failed to create the fleet'], 500);
+        }
+
+        return new FleetResource($fleet);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        //
+        $fleet = Fleet::findOrFail($id);
+
+        if (is_null($fleet)) {
+            return response()->json(['message' => 'Fleet Not Found'], 404);
+        }
+
+        if (!$fleet->delete()) {
+            return response()->json(['message' => 'Failed to create the fleet'], 500);
+        }
+
+        return response()->json(['message' => 'Fleet has been deleted'], 200);
     }
 }

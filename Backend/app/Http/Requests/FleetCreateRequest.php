@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -12,7 +13,7 @@ class FleetCreateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return auth()->check();
     }
 
     /**
@@ -28,7 +29,10 @@ class FleetCreateRequest extends FormRequest
             'capacity' => 'required',
             'fleet_image' => 'nullable',
             'in_service' => 'required',
-            'created_by' => 'nullable',
+            'created_by' => [
+                'required',
+                Rule::exists(User::class, 'id'),
+            ]
         ];
     }
 }

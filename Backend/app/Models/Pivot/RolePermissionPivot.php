@@ -13,15 +13,13 @@ class RolePermissionPivot extends Pivot
 {
     use HasFactory;
 
-    protected $table = 'role_perms';
-
     public function role(): BelongsTo
     {
-        return $this->belongsTo(Role::class, 'role_id');
+        return $this->belongsTo(Role::class);
     }
 
-    public function permission()
+    public function permission(): BelongsTo
     {
-        return $this->belongsTo(Permission::class, 'permission_id');
+        return $this->belongsTo(Permission::class);
     }
 }

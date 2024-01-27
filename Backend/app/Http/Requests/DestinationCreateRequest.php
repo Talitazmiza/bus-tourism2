@@ -11,7 +11,7 @@ class DestinationCreateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return auth()->check();
     }
 
     /**
@@ -23,7 +23,7 @@ class DestinationCreateRequest extends FormRequest
     {
         return [
             'dest_name' => 'required|string|min:2',
-            'dest_image' => 'nullable',
+            'dest_image' => 'nullable|string|max:2048',
             'estimated_price' => 'nullable|integer|min:0',
             'estimated_trip' => 'nullable|integer|min:0',
         ];
