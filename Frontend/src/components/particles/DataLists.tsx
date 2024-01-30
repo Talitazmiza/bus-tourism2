@@ -100,7 +100,7 @@ export const TopDestinationTexts = {
 }
 
 export const BookingStepsTexts = {
-    firstText: "Cara Booking",
+    firstText: "Info Booking",
     secondText: "Booking dengan 3 langkah mudah.",
     listOfSteps: [
         {
@@ -119,6 +119,34 @@ export const BookingStepsTexts = {
         date: "14-29 June  |  by Robbin Jobs",
         people: "24 people going"
     },
+    cardTwo: {
+        status: "Ongoing",
+        destination: "Trip to Rome",
+        completion: "40% Completed"
+    }
+
+}
+
+export const CompanyInformationTexts = {
+    firstText: "Hubungi Kami",
+    secondText: "Booking dengan 3 langkah mudah.",
+    listOfSteps: [
+        {
+            text: "(031) 98327123"
+        },
+        {
+            text: "@bustourism"
+        },
+        {
+            text: "08129316231972"
+        }
+    ],
+    cardOne:
+        {
+            name: "Trip To Greece",
+            date: "14-29 June  |  by Robbin Jobs",
+            people: "24 people going"
+        },
     cardTwo: {
         status: "Ongoing",
         destination: "Trip to Rome",

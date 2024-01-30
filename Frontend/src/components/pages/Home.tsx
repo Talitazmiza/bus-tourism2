@@ -7,6 +7,7 @@ import Testimonials from "../organs/Testimonials"
 import TopDestination from "../organs/TopDestination"
 import NavBar from "../../components/organs/NavBar"
 import Footer from "../../components/organs/Footer"
+import CompanyInformation from "../organs/CompanyInformation.tsx";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Services />
             <TopDestination />
             <BookingSteps />
+            <CompanyInformation />
             <Footer />
         </>
     )
