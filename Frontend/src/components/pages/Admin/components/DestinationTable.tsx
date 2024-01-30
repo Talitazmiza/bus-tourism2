@@ -18,11 +18,11 @@ function createData(
 }
 
 const rows = [
-    createData('1', 'jakarta', '<img>', 450000, 1),
-    createData('2','Bandung', '<img>', 9.0, 2),
-    createData('3','Surabaya', '<img>', 16.0, 1),
-    createData('4','Malang', '<img>', 3.7, 0),
-    createData('5','Banyuwangi', '<img>', 16.0, 1),
+    createData('1', 'jakarta', 'img', 450000, 1),
+    createData('2','Bandung', 'img', 9.0, 2),
+    createData('3','Surabaya', 'img', 16.0, 1),
+    createData('4','Malang', 'img', 3.7, 0),
+    createData('5','Banyuwangi', 'img', 16.0, 1),
 ];
 
 export default function BasicTable() {
