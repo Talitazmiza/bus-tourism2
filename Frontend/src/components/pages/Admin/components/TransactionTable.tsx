@@ -34,8 +34,6 @@ export default function BasicTable() {
     return (
         <div className="p-20">
             <div className="flex justify-between w-full mb-5">
-                {/*TODO*/}
-                {/*SearchBar*/}
                 <SearchBar />
                 <AddTransactionPopUp />
             </div>
