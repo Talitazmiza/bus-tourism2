@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: '',
+  content: [
+      "./src/**/*.{js,jsx,ts,tsx}",
+      "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+      "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -14,5 +19,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };
