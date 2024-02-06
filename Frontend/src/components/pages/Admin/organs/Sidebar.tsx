@@ -18,8 +18,8 @@ const Sidebar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/dashboard-schedule"
-                                   className="flex items-center p-2 rounded-lg  hover:bg-gray-100 dark:hover:bg-orange-400  group">
+                                <a href="#"
+                                   className="flex items-center p-2 rounded-lg bg-gray-500 hover:bg-gray-100 dark:hover:bg-orange-400  group">
                                     <FontAwesomeIcon icon={faClock} />
                                     <span className="flex-1 ml-3 whitespace-nowrap">Jadwal</span>
                                 </a>
@@ -47,7 +47,7 @@ const Sidebar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/dashboard-role"
                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
                                     <FontAwesomeIcon icon={faUsers} />
                                     <span className="flex-1 ml-3 whitespace-nowrap">Role</span>
@@ -62,15 +62,9 @@ const Sidebar = () => {
                             </li>
                             <h1 className="text-gray-400">AUTH</h1>
                             <li>
-                                <a href="#"
+                                <a href="/login"
                                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-orange-400  group">
-                                    <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+                                    <span className="flex-1 ml-3 whitespace-nowrap">Log In</span>
                                 </a>
                             </li>
                             <li>
