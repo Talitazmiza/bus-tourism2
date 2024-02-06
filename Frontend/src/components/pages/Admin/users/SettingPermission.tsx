@@ -1,4 +1,4 @@
-import AdminNavBar from "../organs/NavBar.tsx";
+import AdminNavBar from "../organs/AdminNavBar.tsx";
 import Sidebar from "../organs/Sidebar.tsx";
 import RolePermission from "./RolePermission.tsx";
 

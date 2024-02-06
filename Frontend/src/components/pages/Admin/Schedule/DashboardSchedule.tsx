@@ -1,6 +1,6 @@
 import Sidebar from "../organs/Sidebar.tsx";
 import ScheduleTable from "../components/ScheduleTable.tsx";
-import AdminNavBar from "../organs/NavBar.tsx";
+import AdminNavBar from "../organs/AdminNavBar.tsx";
 
 const Dashboard = () => {
     return (

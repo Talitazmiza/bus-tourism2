@@ -1,6 +1,6 @@
 import Sidebar from "../organs/Sidebar.tsx";
 // @ts-ignore
-import AdminNavBar from '../organs/NavBar.tsx';
+import AdminNavBar from '../organs/AdminNavBar.tsx';
 import FleetTable from "../components/fleetTable.tsx";
 
 const Dashboard = () => {
