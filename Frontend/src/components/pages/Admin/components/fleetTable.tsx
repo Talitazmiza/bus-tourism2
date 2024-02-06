@@ -1,5 +1,5 @@
 import AddFleet from "../Fleet/addFleet.tsx";
-import EditFleet from "../Fleet/editFleet.tsx";
+import EditFleet from "../Fleet/UpdateFleetPopUp.tsx";
 import DeleteFleet from "../Fleet/deleteFleet.tsx";
 
 const fleetTable = () => {
@@ -52,7 +52,7 @@ const fleetTable = () => {
                                 <p className="font-medium text-meta-3">20</p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                <p className="font-medium text-green-400"> Active
+                                <p className="font-medium text-green-400"> Tersedia
                                 </p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5 gap-10">
@@ -102,7 +102,7 @@ const fleetTable = () => {
                                 <p className="font-medium text-meta-3">20</p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                <p className="font-medium text-green-400"> Active
+                                <p className="font-medium text-green-400"> Tersedia
                                 </p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5 gap-10">
@@ -127,7 +127,7 @@ const fleetTable = () => {
                                 <p className="font-medium text-meta-3">20</p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                <p className="font-medium text-green-400"> Active
+                                <p className="font-medium text-green-400"> Tersedia
                                 </p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5 gap-10">
@@ -152,7 +152,7 @@ const fleetTable = () => {
                                 <p className="font-medium text-meta-3">20</p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                <p className="font-medium text-green-400"> Active
+                                <p className="font-medium text-green-400"> Tersedia
                                 </p>
                             </div>
                             <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5 gap-10">
