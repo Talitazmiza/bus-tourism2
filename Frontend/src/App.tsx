@@ -14,6 +14,7 @@ import DashboardDestination from "./components/pages/Admin/Destination/Dashboard
 import DashboardTransaction from "./components/pages/Admin/Transaction/DashboardTransaction.tsx";
 import Dashboarduser from "./components/pages/Admin/users/Dashboarduser.tsx";
 import SettingPermission from "./components/pages/Admin/users/SettingPermission.tsx";
+import DashboardRole from "./components/pages/Admin/users/DashboardRole.tsx";
 
 function App() {
   const directory = useLocation();
@@ -34,7 +35,10 @@ function App() {
         <Route path="/dashboard-destination" element={<DashboardDestination />}/>
         <Route path="/dashboard-transaction" element={<DashboardTransaction />}/>
         <Route path="/dashboard-user" element={<Dashboarduser />}/>
+        <Route path="/dashboard-role" element={<DashboardRole />} />
         <Route path="/setting-permission" element={<SettingPermission />}/>
+        <Route path="/setting-permission" element={<SettingPermission />}/>
+
       </Routes>
     </div>
   )
