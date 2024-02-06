@@ -102,6 +102,9 @@ const RolePermission = () => {
                                 </TreeItem>
                             </TreeView>
                         </Box>
+                        <button className="btn bg-blue-500 p-3 rounded-lg">
+                            Terapkan
+                        </button>
                     </div>
                 </div>
             </div>
