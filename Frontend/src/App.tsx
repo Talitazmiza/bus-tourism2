@@ -12,7 +12,7 @@ import DashboardFleet from "./components/pages/Admin/Fleet/DashboardFleet.tsx";
 import DashboardSchedule from "./components/pages/Admin/Schedule/DashboardSchedule.tsx";
 import DashboardDestination from "./components/pages/Admin/Destination/DashboardDestination.tsx";
 import DashboardTransaction from "./components/pages/Admin/Transaction/DashboardTransaction.tsx";
-import Dashboarduser from "./components/pages/Admin/users/Dashboarduser.tsx";
+import DashboardUser from "./components/pages/Admin/users/Dashboarduser.tsx";
 import SettingPermission from "./components/pages/Admin/users/SettingPermission.tsx";
 import DashboardRole from "./components/pages/Admin/users/DashboardRole.tsx";
 
@@ -34,7 +34,7 @@ function App() {
         <Route path="/dashboard-schedule" element={<DashboardSchedule />}/>
         <Route path="/dashboard-destination" element={<DashboardDestination />}/>
         <Route path="/dashboard-transaction" element={<DashboardTransaction />}/>
-        <Route path="/dashboard-user" element={<Dashboarduser />}/>
+        <Route path="/dashboard-user" element={<DashboardUser />}/>
         <Route path="/dashboard-role" element={<DashboardRole />} />
         <Route path="/setting-permission" element={<SettingPermission />}/>
         <Route path="/setting-permission" element={<SettingPermission />}/>
